@@ -14,8 +14,7 @@
 
 ******************************/
 
-$(document).ready(function()
-{
+$(document).ready(function () {
 	"use strict";
 
 	/* 
@@ -31,13 +30,11 @@ $(document).ready(function()
 
 	setHeader();
 
-	$(window).on('resize', function()
-	{
+	$(window).on('resize', function () {
 		setHeader();
 	});
 
-	$(document).on('scroll', function()
-	{
+	$(document).on('scroll', function () {
 		setHeader();
 	});
 
@@ -52,27 +49,17 @@ $(document).ready(function()
 
 	*/
 
-	function setHeader()
-	{
-		if(window.innerWidth < 992)
-		{
-			if($(window).scrollTop() > 100)
-			{
+	function setHeader() {
+		if (window.innerWidth < 992) {
+			if ($(window).scrollTop() > 100) {
 				header.addClass('scrolled');
-			}
-			else
-			{
+			} else {
 				header.removeClass('scrolled');
 			}
-		}
-		else
-		{
-			if($(window).scrollTop() > 100)
-			{
+		} else {
+			if ($(window).scrollTop() > 100) {
 				header.addClass('scrolled');
-			}
-			else
-			{
+			} else {
 				header.removeClass('scrolled');
 			}
 		}
@@ -88,32 +75,22 @@ $(document).ready(function()
 
 	*/
 
-	function initHamburger()
-	{
-		if($('.hamburger').length)
-		{
-			hamb.on('click', function(event)
-			{
+	function initHamburger() {
+		if ($('.hamburger').length) {
+			hamb.on('click', function (event) {
 				event.stopPropagation();
 
-				if(!menuActive)
-				{
+				if (!menuActive) {
 					openMenu();
-					
-					$(document).one('click', function cls(e)
-					{
-						if($(e.target).hasClass('menu_mm'))
-						{
+
+					$(document).one('click', function cls(e) {
+						if ($(e.target).hasClass('menu_mm')) {
 							$(document).one('click', cls);
-						}
-						else
-						{
+						} else {
 							closeMenu();
 						}
 					});
-				}
-				else
-				{
+				} else {
 					$('.menu_container').removeClass('active');
 					menuActive = false;
 				}
@@ -121,16 +98,14 @@ $(document).ready(function()
 		}
 	}
 
-	function openMenu()
-	{
+	function openMenu() {
 		var fs = $('.menu_container');
 		fs.addClass('active');
 		hambActive = true;
 		menuActive = true;
 	}
 
-	function closeMenu()
-	{
+	function closeMenu() {
 		var fs = $('.menu_container');
 		fs.removeClass('active');
 		hambActive = false;
@@ -143,35 +118,41 @@ $(document).ready(function()
 
 	*/
 
-	function initSpecialSlider()
-	{
-		if($('.special_slider').length)
-		{
+	function initSpecialSlider() {
+		if ($('.special_slider').length) {
 			var specialSlider = $('.special_slider');
-			specialSlider.owlCarousel(
-			{
-				loop:true,
-				autoplay:false,
-				center:true,
-				stagePadding:190,
-				margin:5,
-				nav:false,
-				dots:false,
-				smartSpeed:700,
-				responsive:
-				{
-					0:{items:1,margin:5,stagePadding:0},
-					992:{items:2,margin:5,stagePadding:130},
-					1280:{items:3,margin:5,stagePadding:190}
+			specialSlider.owlCarousel({
+				loop: true,
+				autoplay: false,
+				center: true,
+				stagePadding: 190,
+				margin: 5,
+				nav: false,
+				dots: false,
+				smartSpeed: 700,
+				responsive: {
+					0: {
+						items: 1,
+						margin: 5,
+						stagePadding: 0
+					},
+					992: {
+						items: 2,
+						margin: 5,
+						stagePadding: 130
+					},
+					1280: {
+						items: 3,
+						margin: 5,
+						stagePadding: 190
+					}
 				}
 			});
 		}
 
-		if($('.special_slider_nav').length)
-		{
+		if ($('.special_slider_nav').length) {
 			var next = $('.special_slider_nav');
-			next.on('click', function()
-			{
+			next.on('click', function () {
 				specialSlider.trigger('next.owl.carousel');
 			});
 		}
@@ -183,16 +164,15 @@ $(document).ready(function()
 
 	*/
 
-	function initVideo()
-	{
+	function initVideo() {
 		$('.video').magnificPopup({
-          disableOn: 700,
-          type: 'iframe',
-          mainClass: 'mfp-fade',
-          removalDelay: 160,
-          preloader: false,
-          fixedContentPos: false
-        });
+			disableOn: 700,
+			type: 'iframe',
+			mainClass: 'mfp-fade',
+			removalDelay: 160,
+			preloader: false,
+			fixedContentPos: false
+		});
 	}
 
 	/* 
@@ -201,16 +181,12 @@ $(document).ready(function()
 
 	*/
 
-	function initSearch()
-	{
-		if($('.search').length)
-		{
+	function initSearch() {
+		if ($('.search').length) {
 			var search = $('.search');
-			search.on('click', function(e)
-			{
+			search.on('click', function (e) {
 				var target = $(e.target);
-				if(!target.hasClass('ctrl_class'))
-				{
+				if (!target.hasClass('ctrl_class')) {
 					$(this).toggleClass('active');
 				}
 			});
