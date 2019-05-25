@@ -253,13 +253,14 @@ section {
 
 .home {
 	width: 100%;
-	height: 100vh;
+	/* height: 100vh; */
 }
 
 .home_background {
-	position: absolute;
+	/* position: absolute;
 	top: 0;
-	left: 0;
+	left: 0; */
+
 	width: 100%;
 	height: 100%;
 	background-repeat: no-repeat;
@@ -1835,13 +1836,11 @@ section {
 *********************************/
 
 .tab-content {
-	width: 75%;
+	width: 80%;
 	justify-content: center;
 	align-content: center;
 	text-align: center;
-	margin-top: 55%;
-	transform: translate(0%, -50%);
-	margin-left: 20%;
+	margin: 50% 0% 50% 10%;
 }
 
 .tab-content ul {
@@ -1873,7 +1872,7 @@ section {
 	height: 60px;
 	line-height: 60px;
 	padding-left: 20px;
-	background-color: rgba(0, 0, 0, 0.27);
+	background-color: rgba(255, 255, 255, 0.16);
 	vertical-align: middle;
 }
 
@@ -1885,6 +1884,7 @@ section {
 	line-height: 60px;
 	text-align: center;
 	font-size: 32px;
+	color: #fff;
 
 }
 
@@ -1893,22 +1893,50 @@ section {
 }
 
 
+.bottom-tab {
+	display: grid;
+}
 
+.bottom-tab ul {
+	display: -webkit-inline-box;
+}
+
+.bottom-tab li {
+	width: 30%;
+	background-color: #ffe165;
+	margin-right: 20px;
+	border-radius: 6px;
+}
+
+.bottom-tab li a {
+	color: #000000;
+	text-transform: none;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 20px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 
 /*********************************
 7.1 Contact Form
 *********************************/
 
+.enquiry-form-title {
+	color: #fff;
+	transition: all 0.5s;
+}
+
 .contact_form_container {
 	width: 100%;
-	margin-top: 55%;
-	transform: translate(0, -50%);
-	margin-left: 20%;
+	margin: 50% 0% 50% 20%;
 }
 
 .contact_input {
-	width: 60%;
+	width: 70%;
 	height: 41px;
 	border: solid 2px #dbdbdb;
 	padding-left: 20px;
@@ -1957,7 +1985,7 @@ section {
 }
 
 .contact_input_message {
-	width: 60%;
+	width: 70%;
 	height: 223px;
 	border: solid 2px #dbdbdb;
 	outline: none;
@@ -1981,177 +2009,11 @@ section {
 
 .contact_send_btn:hover {
 	background: rgba(243, 112, 46, 0.8);
-
 }
 
-@media (max-width:1440px) {
-	.tab-content {
-		margin-top: 75%;
-
-	}
-
-	.contact_form_container {
-
-		margin-top: 75%;
-
-	}
-
-	.tab-content li a {
-
-		letter-spacing: 0.5px;
-		color: #fff;
-		font-size: 16px;
-		font-weight: 400;
-		display: inline-block;
-		width: 80%;
-		height: 50px;
-		line-height: 50px;
-		padding-left: 15px;
-
-	}
-
-	.tab-content li i {
-		height: 50px;
-		line-height: 50px;
-		font-size: 30px;
-
-	}
-}
-
-@media (max-width:1024px) {
-	.tab-content {
-		margin-top: 100%;
-
-	}
-
-	.contact_form_container {
-
-		margin-top: 100%;
-
-	}
-
-	.tab-content li a {
-
-		letter-spacing: 0.5px;
-		color: #fff;
-		font-size: 14px;
-		font-weight: 400;
-		display: inline-block;
-		width: 80%;
-		height: 45px;
-		line-height: 50px;
-		padding-left: 15px;
-
-	}
-
-
-	.tab-content li i {
-		height: 45px;
-		line-height: 40px;
-		font-size: 28px;
-
-	}
-}
-
-@media (max-width: 991px) {
-	.tab-content {
-		margin-top: 48%;
-		margin-left: 15%;
-
-	}
-
-	.contact_form_container {
-
-		display: none
-	}
-
-	.tab-content li a {
-
-		letter-spacing: 0.5px;
-		color: #fff;
-		font-size: 14px;
-		font-weight: 400;
-		display: inline-block;
-		width: 80%;
-		height: 45px;
-		line-height: 50px;
-		padding-left: 15px;
-
-	}
-
-
-	.tab-content li i {
-		height: 45px;
-		line-height: 40px;
-		font-size: 28px;
-
-	}
-}
-
-@media (max-width: 768px) {
-	.tab-content {
-		margin-top: 60%;
-
-	}
-
-	.contact_form_container {
-
-		display: none
-	}
-
-	.tab-content li a {
-
-		letter-spacing: 0.5px;
-		color: #fff;
-		font-size: 14px;
-		font-weight: 400;
-		display: inline-block;
-		width: 80%;
-		height: 45px;
-		line-height: 50px;
-		padding-left: 15px;
-
-	}
-
-
-	.tab-content li i {
-		height: 45px;
-		line-height: 40px;
-		font-size: 28px;
-
-	}
-}
-
-@media (max-width: 425px) {
-	.tab-content {
-		margin-top: 100%;
-
-	}
-
-	.contact_form_container {
-
-		display: none
-	}
-
-	.tab-content li a {
-
-		letter-spacing: 0.5px;
-		color: #fff;
-		font-size: 14px;
-		font-weight: 400;
-		display: inline-block;
-		width: 80%;
-		height: 45px;
-		line-height: 50px;
-		padding-left: 15px;
-
-	}
-
-
-	.tab-content li i {
-		height: 45px;
-		line-height: 40px;
-		font-size: 28px;
-
-	}
+.overlay {
+	background: rgba(0, 0, 0, .2);
+	-moz-box-shadow: inset 0 0 300px #000000;
+	-webkit-box-shadow: inset 0 0 300px #000000;
+	box-shadow: inset 0 0 300px #000000;
 }
